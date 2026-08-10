@@ -118,12 +118,12 @@ html body .hl_wrapper{background:#05070d !important}
 /* Section split -> basecamp alternating shades (#0a0a0a near-black <-> #0d1526 navy) */
 #section-lroLbKIJkY{background-color:#0a0a0a !important}
 /* Hero glow spans header + video, mirrored at the seam so the brightness matches (no line) */
-#section-ZgLzU3YeEM{
-  background:
-    radial-gradient(1000px 620px at 50% -140px, rgba(56,182,255,0.16) 0%, rgba(56,182,255,0.04) 44%, transparent 68%),
-    #05070d !important;
-}
-#section-q6IV4xwRxA{background:#05070d !important}
+/* Basecamp hero glow: exact blurred orbs on the fixed page background */
+.bg-fixed{background-color:#05070d !important;overflow:hidden}
+.bg-fixed::before{content:"";position:absolute;top:-12%;left:50%;transform:translateX(-50%);width:900px;height:900px;border-radius:50%;background:rgba(56,182,255,0.15);filter:blur(160px);pointer-events:none}
+.bg-fixed::after{content:"";position:absolute;bottom:-18%;right:8%;width:520px;height:520px;border-radius:50%;background:rgba(59,130,246,0.10);filter:blur(120px);pointer-events:none}
+#section-ZgLzU3YeEM{background:transparent !important}
+#section-q6IV4xwRxA{background:transparent !important}
 /* Hero video: rounded frame with basecamp's blue glow (like .hero-image) */
 .hl_page-preview--content .cvideo-Ss18jcQ-xE{border-radius:20px !important;overflow:hidden !important;box-shadow:0 24px 80px rgba(59,130,246,0.25) !important;border:1px solid rgba(59,130,246,0.2) !important;padding:0 !important}
 #section-JzG3YmbcrT{background-color:#0d1526 !important}
