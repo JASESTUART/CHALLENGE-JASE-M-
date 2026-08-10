@@ -109,18 +109,23 @@
 }
 /* Page base -> navy */
 html body .hl_wrapper{background:#05070d !important}
+/* Remove the template's 2px black borders (they show as seams/lines on the dark theme) */
+.hl_page-preview--content .c-section,
+.hl_page-preview--content .c-row,
+.hl_page-preview--content .c-column,
+.hl_page-preview--content .c-wrapper{border:0 !important}
 .bg-fixed{background-color:#05070d !important}
 /* Section split -> basecamp alternating shades (#0a0a0a near-black <-> #0d1526 navy) */
 #section-lroLbKIJkY{background-color:#0a0a0a !important}
-/* Hero glow spans the header + video sections (like basecamp's hero) */
+/* Hero glow spans header + video, mirrored at the seam so the brightness matches (no line) */
 #section-ZgLzU3YeEM{
   background:
-    radial-gradient(140% 280% at 50% 120%, rgba(56,130,246,0.34) 0%, rgba(56,130,246,0.12) 42%, transparent 72%),
+    radial-gradient(1500px 900px at 50% 100%, rgba(56,130,246,0.30) 0%, rgba(56,130,246,0.12) 40%, transparent 74%),
     #060a12 !important;
 }
 #section-q6IV4xwRxA{
   background:
-    radial-gradient(120% 85% at 50% 0%, rgba(56,130,246,0.30) 0%, rgba(56,130,246,0.10) 40%, rgba(56,130,246,0.03) 65%, transparent 82%),
+    radial-gradient(1500px 900px at 50% 0%, rgba(56,130,246,0.30) 0%, rgba(56,130,246,0.12) 40%, transparent 74%),
     #060a12 !important;
 }
 #section-JzG3YmbcrT{background-color:#0d1526 !important}
