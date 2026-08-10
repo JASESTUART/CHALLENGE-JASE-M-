@@ -131,6 +131,8 @@ html body .hl_wrapper{background:#05070d !important}
 .bc-player-frame{position:absolute;inset:0}
 .bc-player-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .bc-poster{position:absolute;inset:0;border:0;padding:0;cursor:pointer;background:transparent;z-index:3}
+/* Kill the template's ▶ overlay (.figure span:after) that leaks onto our control spans */
+.hl_page-preview--content .cvideo-Ss18jcQ-xE span:after,.hl_page-preview--content .cvideo-Ss18jcQ-xE span:before{content:none !important;display:none !important}
 .bc-controls{position:absolute;left:0;right:0;bottom:0;z-index:4;display:flex;align-items:center;gap:12px;padding:14px 16px 12px;background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.72) 100%);opacity:0;transition:opacity .25s;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
 .bc-player:hover .bc-controls,.bc-controls.show{opacity:1}
 .bc-btn{background:none;border:0;padding:0;cursor:pointer;width:28px;height:28px;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
@@ -155,6 +157,9 @@ html body .hl_wrapper{background:#05070d !important}
 #col-q6lHE9meE3{align-self:flex-start !important;width:auto !important;margin:0 !important;padding:0 !important}
 #col-zwNyPgAA6I{width:100% !important}
 #image-dQkwHmwiXg img{width:64px !important;max-width:64px !important;height:auto !important}
+/* Show the round badge on mobile too (it's marked desktop-only); hide the faint mobile wordmark strip */
+@media(max-width:767px){#col-q6lHE9meE3,#col-q6lHE9meE3 .vertical,#image-dQkwHmwiXg,#image-dQkwHmwiXg .image-container{display:block !important}}
+#section-lroLbKIJkY{display:none !important}
 /* Headings: base text light, bold emphasis bright blue */
 .hl_page-preview--content .c-heading .text-output{color:#ffffff !important}
 .hl_page-preview--content .c-heading strong{
