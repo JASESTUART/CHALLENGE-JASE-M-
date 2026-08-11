@@ -156,13 +156,13 @@ html body .hl_wrapper{background:#05070d !important}
 #row-4RE11O2Weu>.inner{flex-direction:column !important;align-items:center !important}
 #col-q6lHE9meE3{align-self:flex-start !important;width:auto !important;margin:0 !important;padding:0 !important}
 #col-zwNyPgAA6I{width:100% !important}
-#image-dQkwHmwiXg img{width:64px !important;max-width:64px !important;height:auto !important}
+#image-dQkwHmwiXg img{width:64px !important;max-width:64px !important;height:auto !important;filter:drop-shadow(0 0 14px rgba(59,130,246,0.4))}
 /* Show the round badge on mobile too (it's marked desktop-only); hide the faint mobile wordmark strip */
 @media(max-width:767px){
   #col-q6lHE9meE3,#col-q6lHE9meE3 .vertical,#image-dQkwHmwiXg,#image-dQkwHmwiXg .image-container{display:block !important}
-  #col-q6lHE9meE3{padding:8px 0 0 14px !important}
-  #image-dQkwHmwiXg,#image-dQkwHmwiXg .image-container{width:46px !important;max-width:46px !important}
-  #image-dQkwHmwiXg img{width:46px !important;max-width:46px !important;height:auto !important}
+  #col-q6lHE9meE3{padding:10px 0 0 18px !important;margin-bottom:30px !important}
+  #image-dQkwHmwiXg,#image-dQkwHmwiXg .image-container{width:50px !important;max-width:50px !important}
+  #image-dQkwHmwiXg img{width:50px !important;max-width:50px !important;height:auto !important}
 }
 #section-lroLbKIJkY{display:none !important}
 /* Headings: base text light, bold emphasis bright blue */
@@ -309,7 +309,7 @@ html body .hl_wrapper{background:#05070d !important}
   function start(){
     if(player) return;
     flash();
-    player=new Vimeo.Player(frame,{url:'https://player.vimeo.com/video/1203300100?h=cc49583811',controls:false,autoplay:true,muted:true,title:false,byline:false,portrait:false,dnt:true});
+    player=new Vimeo.Player(frame,{url:'https://player.vimeo.com/video/1203300100?h=cc49583811',controls:false,autoplay:true,muted:true,playsinline:true,title:false,byline:false,portrait:false,dnt:true});
     muteBtn.innerHTML=ICON.mute;
     player.play().catch(function(){});
     player.getDuration().then(function(d){duration=d;});
